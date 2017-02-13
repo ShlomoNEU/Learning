@@ -1,0 +1,144 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shne.learning.Activity.Fragments.TransactionView"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/TX_NAME_TRANS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:textSize="14sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/actionMenuTextColor" />
+                <TextView
+                    android:id="@+id/TX_TYPE_TRANS"
+                    android:layout_below="@id/TX_NAME_TRANS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type"
+                    android:textSize="14sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/actionMenuTextColor"  />
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TX_AMOUNT_APPBAR"
+                    android:layout_alignParentRight="true">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="From:"
+                        android:textSize="14sp"
+                        android:textStyle="normal|bold|italic"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/actionMenuTextColor" />
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/From_Month_spinner"
+                        android:textSize="14sp"
+                        android:textStyle="normal|bold|italic"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/actionMenuTextColor"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="To:"
+                        android:textSize="14sp"
+                        android:textStyle="normal|bold|italic"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/actionMenuTextColor" />
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/To_Month_spinner"
+                        android:textSize="14sp"
+                        android:textStyle="normal|bold|italic"
+                        android:textAllCaps="false"
+                        android:textColor="?attr/actionMenuTextColor" />
+                </LinearLayout>
+                <TextView
+                    android:text="145.7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/TX_NAME_TRANS"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/TX_AMOUNT_APPBAR"
+                    android:textSize="14sp"
+                    android:textStyle="normal|bold|italic"
+                    android:textAllCaps="false"
+                    android:textColor="?attr/actionMenuTextColor" />
+            </RelativeLayout>
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/Trans_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:weightSum="3">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/AddFabTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="@+id/ListRecycleTrans"
+            app:layout_constraintBottom_toBottomOf="@+id/ListRecycleTrans"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_add_black_48dp"
+            app:elevation="11dp"
+            app:backgroundTint="#0ABFBC" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="0dp"
+            android:id="@+id/ListRecycleTrans"
+            android:layout_height="0dp"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_centerHorizontal="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            />
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>

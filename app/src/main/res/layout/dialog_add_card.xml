@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/main_screen_bg"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:text="@string/DialogString_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/DialogAddCard_Title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textStyle="normal|bold|italic"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/NameLinear"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingLeft="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DialogString_TX_Name"
+            android:id="@+id/dialog_TX_Name"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/DialogString_ET_Name"
+            android:id="@+id/dialog_ET_Name"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:maxLength="13"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/TypeLinear"
+        app:layout_constraintLeft_toLeftOf="@+id/NameLinear"
+        app:layout_constraintTop_toBottomOf="@+id/NameLinear"
+        android:paddingLeft="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DialogString_TX_Type"
+            android:id="@+id/dialog_TX_Type"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/DialogString_ET_Type"
+            android:id="@+id/dialog_ET_Type"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:maxLines="1"
+            android:maxLength="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/CodeLinear"
+        app:layout_constraintLeft_toLeftOf="@+id/TypeLinear"
+        app:layout_constraintTop_toBottomOf="@+id/TypeLinear"
+        android:paddingLeft="8dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/DialogString_TX_Code"
+            android:id="@+id/dialog_TX_Code"
+            android:layout_marginTop="16dp"
+            />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/DialogString_ET_Code"
+            android:id="@+id/dialog_ET_Code"
+            android:maxLength="4"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:maxEms="4"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Dialog_add"
+            android:id="@+id/dialog_BTN_add"
+            style="@style/AlertDialog.AppCompat"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toRightOf="@+id/dialog_BTN_cancel"
+            app:layout_constraintTop_toBottomOf="@+id/CodeLinear"
+            android:padding="8dp"
+            android:layout_margin="8dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:id="@+id/dialog_BTN_cancel"
+            style="@style/AlertDialog.AppCompat"
+            android:background="@android:drawable/dialog_holo_dark_frame"
+            android:textColor="@android:color/white"
+            app:layout_constraintLeft_toLeftOf="@+id/CodeLinear"
+            app:layout_constraintTop_toBottomOf="@+id/CodeLinear"
+            android:padding="8dp"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+</LinearLayout>
