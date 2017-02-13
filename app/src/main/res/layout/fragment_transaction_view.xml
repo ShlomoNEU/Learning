@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -51,15 +51,16 @@
                         android:textStyle="normal|bold|italic"
                         android:textAllCaps="false"
                         android:textColor="?attr/actionMenuTextColor" />
-                    <Spinner
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/From_Month_spinner"
                         android:textSize="14sp"
                         android:textStyle="normal|bold|italic"
                         android:textAllCaps="false"
+                        android:hint="From"
                         android:textColor="?attr/actionMenuTextColor"
-                        />
+                        android:paddingRight="8dp" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -68,13 +69,14 @@
                         android:textStyle="normal|bold|italic"
                         android:textAllCaps="false"
                         android:textColor="?attr/actionMenuTextColor" />
-                    <Spinner
+                    <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:id="@+id/To_Month_spinner"
                         android:textSize="14sp"
                         android:textStyle="normal|bold|italic"
                         android:textAllCaps="false"
+                        android:hint="To"
                         android:textColor="?attr/actionMenuTextColor" />
                 </LinearLayout>
                 <TextView
@@ -95,7 +97,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_scrollFlags="scroll|enterAlways"/>
         </android.support.design.widget.CollapsingToolbarLayout>
 
 
@@ -141,4 +144,4 @@
 
             />
     </android.support.constraint.ConstraintLayout>
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

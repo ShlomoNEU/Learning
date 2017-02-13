@@ -13,17 +13,32 @@
     <string name="DialogString_ET_Code">4 Last digits XXXX</string>
     <string name="DialogString_TX_Name">Name:</string>
     <string name="DialogString_ET_Name">Blue Card</string>
-    <string-array name="CardTypes">
-        <item>Visa</item>
+    <string-array name="credit_card_companies">
         <item>American Express</item>
-        <item>MasterCard</item>
+        <item>Capital One</item>
+        <item>Chase</item>
+        <item>Citi</item>
+        <item>Diners Club</item>
+        <item>Discover</item>
         <item>JCB</item>
         <item>Maestro</item>
+        <item>Mastercard</item>
         <item>Visa</item>
-        <item>enRoute</item>
-        <item>Diners Club</item>
-        <item>Carte Blanche</item>
-
+    </string-array>
+    <string-array name="months">
+        <item>January</item>
+        <item>February</item>
+        <item>March</item>
+        <item>April</item>
+        <item>May</item>
+        <item>June</item>
+        <item>July</item>
+        <item>August</item>
+        <item>September</item>
+        <item>October</item>
+        <item>November</item>
+        <item>December</item>
+        <item>All</item>
     </string-array>
     <string name="title_activity_card_transactions">CardTransactions</string>
     <string name="DialogString_Title">Add Card</string>
